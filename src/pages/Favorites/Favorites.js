@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Text from "components/Text";
 import UserList from "components/UserList";
 import { usePeopleFetch } from "../../hooks/usePeopleFetch";
 import * as S from "./style";
 
-const Home = () => {
-  const { users, isLoading,fetchMoreUsers } = usePeopleFetch();
+const Favorites = () => {
+var savedFavUsers = JSON.parse(localStorage.getItem('favoriteUsers'));
+
 
   return (
-    <S.Home>
+    <S.Favorites>
       <S.Content>
         <S.Header>
           <Text size="64px" bold>
-            PplFinder
+            Favorites Users
           </Text>
         </S.Header>
-        <UserList users={users} isLoading={isLoading} fetchMoreUsers={fetchMoreUsers}  />
+        <UserList isLoading={false} favoritesView={true} />
+        
       </S.Content>
-    </S.Home>
+    </S.Favorites>
   );
 };
 
-export default Home;
+export default Favorites;

@@ -1,0 +1,56 @@
+{
+    "gender": "male",
+    "name": {
+        "title": "Mr",
+        "first": "Norman",
+        "last": "Hudson"
+    },
+    "location": {
+        "street": {
+            "number": 3436,
+            "name": "Smokey Ln"
+        },
+        "city": "Reno",
+        "state": "Louisiana",
+        "country": "United States",
+        "postcode": 57927,
+        "coordinates": {
+            "latitude": "88.1708",
+            "longitude": "-51.2602"
+        },
+        "timezone": {
+            "offset": "+3:30",
+            "description": "Tehran"
+        }
+    },
+    "email": "norman.hudson@example.com",
+    "login": {
+        "uuid": "b695cb58-46ae-484d-999a-0488c6d99e11",
+        "username": "organicmouse145",
+        "password": "megatron",
+        "salt": "rAO5Is2e",
+        "md5": "28d1b0037f6eef107f91e765b9235625",
+        "sha1": "0741e8f36c26377fa9e745b134fad05e73df3b81",
+        "sha256": "6a0cf2993e95df8a95d32463a549bd2e6f2ae0bb6c55ebc86bcc1675e3c3852e"
+    },
+    "dob": {
+        "date": "1958-07-18T14:04:46.911Z",
+        "age": 64
+    },
+    "registered": {
+        "date": "2011-06-24T22:17:34.580Z",
+        "age": 11
+    },
+    "phone": "(748)-668-1088",
+    "cell": "(378)-223-0196",
+    "id": {
+        "name": "SSN",
+        "value": "966-31-7305"
+    },
+    "picture": {
+        "large": "https://randomuser.me/api/portraits/men/52.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/52.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/52.jpg"
+    },
+    "nat": "US"
+}
