@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Text from "components/Text";
 import UserList from "components/UserList";
 import { usePeopleFetch } from "../../hooks/usePeopleFetch";
 import * as S from "./style";
 
 const Favorites = () => {
-var savedFavUsers = JSON.parse(localStorage.getItem('favoriteUsers'));
-
+  const [favoriteUsers, setFavoriteUsers] = useState([]);
+  useEffect(() => {
+    if (!localStorage.getItem("favoriteUsers")) {
+      localStorage.setItem("favoriteUsers", JSON.stringify(favoriteUsers));
+    } else {
+      setFavoriteUsers(JSON.parse(localStorage.getItem("favoriteUsers")));
+    }
+  }, []);
 
   return (
     <S.Favorites>
@@ -16,8 +22,7 @@ var savedFavUsers = JSON.parse(localStorage.getItem('favoriteUsers'));
             Favorites Users
           </Text>
         </S.Header>
-        <UserList isLoading={false} favoritesView={true} />
-        
+        <UserList isLoading={false} users={favoriteUsers} favoritesView={true} />
       </S.Content>
     </S.Favorites>
   );
